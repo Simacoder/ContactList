@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.widget.Button
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contactlist.core.model.User
 import com.example.contactlist.core.model.adapter.userAdapter
-import java.text.FieldPosition
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
 
             //create the adapter and link with recyclerview
-            val adapter = userAdapter()
+            val adapter = userAdapter(contactList)
             recyclerView.adapter = userAdapter(contactList)
 
 
